@@ -1,0 +1,276 @@
+/* Reset CSS */
+* {
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.text-white {
+    color: #fff !important;
+}
+.clear {
+    clear: both;
+}
+
+/* End */
+
+#main{
+
+}
+/* Begin: Heading */
+#header{
+    height: 46px;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+#nav {
+    display: inline-block;
+}
+#nav, .subnav{
+    list-style-type: none;
+}
+#nav li{
+    display: inline-block;
+    position: relative;
+}
+#nav li a{
+    padding: 0 16px;
+    line-height: 46px;
+    color: white;
+    text-decoration: none;
+}
+#nav > li > a{
+    text-transform: uppercase;
+}
+#nav .subnav li:hover ,
+#nav > li:hover > a{
+    display: inline-block;
+    color: black;
+    background-color: #ccc;
+}
+#nav li:hover .subnav{
+    display: block;
+}
+#nav .subnav{
+    min-width: 160px;
+    display: none;
+    position: absolute;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+#nav .subnav li{
+    width: 100%;
+    background-color: #fff;
+}
+#nav .subnav a{
+    width: 100%;
+    color: black;
+    line-height: 38px;
+}
+#nav .nav-arrow-down{
+    font-size: 12px;
+}
+.search-button{
+    height: 100%;
+    float:right;
+    padding: 12px 24px;
+}
+.search-button:hover{
+    background-color: #f00;
+}
+.search-icon{
+    font-size: 18px;
+    color: #fff;
+}
+/* End: Heading */
+/* Begin: Slider */
+#slider {
+    background: url('/assets/img/chicago.jpg') top center / cover no-repeat;
+    margin-top: 46px;
+    padding-top: 50%;
+    position: relative;
+}
+#slider .text-content{
+    padding: 32px 0;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+#slider .text-heading{
+    margin: 10px 0;
+    font-family: "Segoe UI",Arial,sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+}
+
+#slider .text-discription{
+    margin: 15px auto;
+    font-size: 15px;
+}
+/* End: Slider */
+/* Begin: Content */
+#content{
+
+}
+
+#content .content-section{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 64px 16px;
+}
+
+#content .content-section .section-heading{
+    font-size: 30px;
+    text-align: center;
+    font-weight: 400;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin: 10px 0 ;
+}
+
+#content .content-section .section-sub-heading{
+    font-size: 15px;
+    text-align: center;
+    font-style: italic;
+    margin: 15px 0;
+    opacity: 0.6;
+}
+#content #about-discription{
+    text-align: justify;
+    font-size: 15px;
+    margin: 15px 0;
+    line-height: 1.5;
+}
+#content .members-list{
+    display: flex;
+    padding: 32px 0;
+}
+#content .members-list .member-item{
+    text-align: center;
+}
+
+#content .member-item .member-name{
+    margin: 15px 0; 
+    font-size: 15px;
+}
+
+#content .member-item .member-img{
+    width: 60%;
+    margin-bottom: 16px;
+    border-radius: 4px;
+}
+
+/* Begin: Tour-section */
+#tour-section{
+    background-color: black;
+}
+/* Tickets */
+#tour-section .tickets-list{
+    border: 1px solid #ccc;
+    background-color: #fff;
+    list-style-type: none;
+    line-height: 1.5;
+    font-size: 15px;
+}
+#tour-section .tickets-list li{
+    color: #757575;
+    padding: 8px 16px;
+    border-bottom: 1px solid #ddd;
+}
+#tour-section .tickets-list .sold-out{
+    display: inline-block;
+    background-color: #f44336;
+    color: white;
+    padding: 0 8px;
+    margin-left: 15px;
+}
+
+#tour-section .tickets-list .quantity{
+    width: 24px;
+    height: 24px;
+    background-color: #000;
+    text-align: center;
+    color: white;
+    margin-right: 16px;
+    border-radius: 50%;
+    float: right;
+    line-height: 24px;
+}
+/* Places */
+.places-list {
+    padding: 32px 0;
+    margin: 0 -8px ;
+}
+
+.places-list .place-item{
+    float: left;
+    width: calc(100%/3);
+    padding: 0 8px;
+}
+.place-item .place-img{
+    display: block;
+    width: 100%;
+}
+.place-item .place-img:hover{
+    opacity: 0.7;
+}
+
+.place-item .place-content{
+    display: inline-block;
+    background-color: #fff;
+    padding: 0 16px;
+    font-size: 15px;
+}
+
+.place-content .place-heading{
+    font-size: 15px;
+    font-weight: 600;
+    margin: 15px 0 ;
+}
+
+.place-content .place-time{
+    color: #757575;
+    margin: 15px 0 ;
+}
+
+.place-content .place-discription{
+    margin: 15px 0 ;
+    line-height: 1.4;
+}
+
+.place-content .buy-ticket-btn{
+    display: inline-block;
+    background-color: #000;
+    color: #fff;
+    padding: 8px 16px;
+    margin-bottom: 16px;
+    text-decoration: none;
+}
+.place-content .buy-ticket-btn:hover{
+    background-color: #ccc;
+    color: #000;
+}
+
+
+/* End: Tour-section */
+
+/* End: Content */
+#footer{
+    padding: 64px 16px;
+    margin: 0 auto;
+    max-width: 800px;
+    text-align: center;
+
+}
+#footer a{
+    color: rgba(0, 0, 0, 0.8);
+}
