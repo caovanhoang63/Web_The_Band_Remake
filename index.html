@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>The Band</title>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1753/1753311.png" type="image/x-icon" />
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/icon/themify-icons/themify-icons.css">
 </head>
@@ -15,16 +16,16 @@
             <!-- Begin: Nav -->
             <ul id="nav">
                 <li>
-                    <a href="">Home</a>
+                    <a href="#">Home</a>
                 </li>
                 <li>
-                    <a href="">Band</a>
+                    <a href="#band">Band</a>
                 </li>
                 <li>
-                    <a href="">Tour</a>
+                    <a href="#tour-section">Tour</a>
                 </li>
                 <li>
-                    <a href="">Contact</a>
+                    <a href="#contact">Contact</a>
                 </li>
                 <li>
                     <a href="#">
@@ -60,7 +61,7 @@
         <!-- Begin: Content -->
         <div id="content">
             <!-- About section -->
-            <div class="content-section">
+            <div id="band" class="content-section">
                 <h2 class="section-heading">The Band</h2>
                 <p class="section-sub-heading">We love music</p>
                 <p id="about-discription">
@@ -101,8 +102,8 @@
                         <li>November <span class="quantity">3</span></li>
                     </ul>
                     <!-- Places -->
-                    <div class="places-list">
-                        <div class="place-item">
+                    <div class="places-list row">
+                        <div class="col-thirds col">
                             <img src="./assets/img/newyork.jpg" alt="" class="place-img">
                             <div class="place-content">
                                 <h3 class="place-heading">New york</h3>
@@ -110,10 +111,10 @@
                                 <p class="place-discription">
                                     Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                                 </p>
-                                <a href="#" class="buy-ticket-btn">Buy Tickets</a>
+                                <button class="btn js-buy-ticket">Buy Tickets</button>
                             </div>
                         </div>
-                        <div class="place-item">
+                        <div class="col-thirds col">
                             <img src="./assets/img/paris.jpg" alt="" class="place-img">
                             <div class="place-content">
                                 <h3 class="place-heading">Paris</h3>
@@ -121,10 +122,10 @@
                                 <p class="place-discription">
                                     Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                                 </p>
-                                <a href="#" class="buy-ticket-btn">Buy Tickets</a>
+                                <button class="btn js-buy-ticket">Buy Tickets</button>
                             </div>
                         </div>
-                        <div class="place-item">
+                        <div class="col-thirds col">
                             <img src="./assets/img/sanfran.jpg" alt="" class="place-img">
                             <div class="place-content">
                                 <h3 class="place-heading">San Francisco</h3>
@@ -132,39 +133,130 @@
                                 <p class="place-discription">
                                     Praesent tincidunt sed tellus ut rutrum sed vitae justo.
                                 </p>
-                                <a href="#" class="buy-ticket-btn">Buy Tickets</a>
+                                <button class="btn js-buy-ticket">Buy Tickets</button>
                             </div>
                         </div>
-                        <div class="clear"></div>
                     </div>
                 </div>
             </div>
             <!-- Contact section -->
-            <div class="content-section">
+            <div id="contact" class="content-section">
                 <h2 class="section-heading">Contact</h2>
                 <p class="section-sub-heading">Fan? Drop a note!</p>
+                <div class="row contact-content">
+                    <div class="col col-half contact-info">
+                        <p>
+                            <i class="ti-location-pin"></i>
+                            Chicago, US
+                            <br>
+                            <i class="ti-mobile"></i>
+                            Phone: +00 151515
+                            <br>
+                            <i class="ti-email"></i>
+                            Email: mail@mail.com
+                        </p>
+                    </div>
+                    <div class="col col-half contact-form">
+                        <form action="">
+                            <div class="row mbt-8">
+                                <div class="col col-half">
+                                    <input placeholder="Name" required type="text" name="" id="" class="form-control">
+                                </div>
+                                <div class="col col-half">
+                                    <input placeholder="Email" required type="email" name="" id="" class="form-control">
+                                </div>
+                            </div>
+                            <div class="row mbt-8">
+                                <div class="col col-full">
+                                    <input placeholder="Message" required type="text" name="" id=""
+                                        class="form-control">
+                                </div>
+                            </div>
+                            <input class="btn mt-8 pull-right" type="submit" value="SEND">
+                        </form>
+                    </div>
+                </div>
             </div>
+            <!-- Map -->
             <div class="banner">
                 <img width="100%" src="./assets/img/map.jpg" alt="">
             </div>
         </div>
         <!-- End: Content -->
-        <div id="footer">
-            <p class="opacity">
-                <i class="ti-facebook"></i>
-                <i class="ti-instagram"></i>
-                <i class="ti-linkedin"></i>
-
-                <br>
-                <br>
-                Powered by
-                <a href="https://www.facebook.com/vanhoang.12032004/">Hoang</a>
-
-            </p>
-        </div>
-
-
     </div>
+    <!-- Begin: Footer -->
+    <footer id="footer">
+        <p class="opacity">
+            <i class="ti-facebook"></i>
+            <i class="ti-instagram"></i>
+            <i class="ti-linkedin"></i>
+            <br>
+            <br>
+            Powered by
+            <a href="https://www.facebook.com/vanhoang.12032004/">Hoang</a>
+        </p>
+    </footer>
+    <!-- End: Footer -->
+    <!-- Modal buy tickets -->
+    <div class="modal js-modal">
+        <div class="modal-container js-modal-container">
+            <div class="modal-close js-modal-close">
+                <i class="ti-close"></i>
+            </div>
+            <header class="modal-header">
+                <i class="ti-bag"></i>
+                Tickets
+            </header>
+            <div class="modal-body">
+                <label for="tickets-quantity" class="modal-label">
+                    <i class="ti-shopping-cart"></i>
+                    Tickets, $15 per person
+                </label>
+                <input id="tickets-quantity" autofocus type="text" class="modal-input" placeholder="How many?">
+                <label for="tickests-email" class="modal-label">
+                    <i class="ti-user"></i>
+                    Send to
+                </label>
+                <input id="tickests-email" type="email" class=" modal-input" placeholder="Enter email">
+                <button id="buy-tickets">
+                    Pay
+                    <i class="ti-check"></i>
+                </button>
+            </div>
+            <footer class="modal-footer">
+                <p class="modal-help">Need
+                    <a href="">help?</a>
+                </p>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        const buyBtns = document.querySelectorAll('.js-buy-ticket')
+
+        const modal = document.querySelector('.js-modal')
+
+        const modalClose = document.querySelector('.js-modal-close')
+
+        const modalContainer = document.querySelector('.js-modal-container')
+        function showBuyTickets() {
+            modal.classList.add('open')
+        }
+        function hideBuyTickets() {
+            modal.classList.remove('open')
+        }
+
+        modalClose.addEventListener('click', hideBuyTickets)
+
+        for (const buyBtn of buyBtns) {
+            buyBtn.addEventListener('click', showBuyTickets)
+        }
+
+        modal.addEventListener('click', hideBuyTickets)
+        modalContainer.addEventListener('click', function (event) {
+            event.stopPropagation()
+        })
+    </script>
 </body>
 
 </html>
