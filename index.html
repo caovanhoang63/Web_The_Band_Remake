@@ -8,6 +8,7 @@
     <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1753/1753311.png" type="image/x-icon" />
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/icon/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
 </head>
 
 <body>
@@ -42,7 +43,10 @@
             <!-- End: Nav -->
             <!-- Begin: Search button -->
             <div class="search-button">
-                <i class="search-icon ti-search"></i>
+                <i class="icon ti-search"></i>
+            </div>
+            <div class="js-menu-button menu-button hidden">
+                <i class="icon ti-menu"></i>
             </div>
             <!-- End: Search button -->
         </div>
@@ -103,7 +107,7 @@
                     </ul>
                     <!-- Places -->
                     <div class="places-list row">
-                        <div class="col-thirds col">
+                        <div class="col-thirds col s-col-full">
                             <img src="./assets/img/newyork.jpg" alt="" class="place-img">
                             <div class="place-content">
                                 <h3 class="place-heading">New york</h3>
@@ -114,7 +118,7 @@
                                 <button class="btn js-buy-ticket">Buy Tickets</button>
                             </div>
                         </div>
-                        <div class="col-thirds col">
+                        <div class="col-thirds col s-col-full">
                             <img src="./assets/img/paris.jpg" alt="" class="place-img">
                             <div class="place-content">
                                 <h3 class="place-heading">Paris</h3>
@@ -125,7 +129,7 @@
                                 <button class="btn js-buy-ticket">Buy Tickets</button>
                             </div>
                         </div>
-                        <div class="col-thirds col">
+                        <div class="col-thirds col s-col-full">
                             <img src="./assets/img/sanfran.jpg" alt="" class="place-img">
                             <div class="place-content">
                                 <h3 class="place-heading">San Francisco</h3>
@@ -144,7 +148,7 @@
                 <h2 class="section-heading">Contact</h2>
                 <p class="section-sub-heading">Fan? Drop a note!</p>
                 <div class="row contact-content">
-                    <div class="col col-half contact-info">
+                    <div class="col col-half s-col-full contact-info">
                         <p>
                             <i class="ti-location-pin"></i>
                             Chicago, US
@@ -156,7 +160,7 @@
                             Email: mail@mail.com
                         </p>
                     </div>
-                    <div class="col col-half contact-form">
+                    <div class="col col-half s-col-full contact-form">
                         <form action="">
                             <div class="row mbt-8">
                                 <div class="col col-half">
@@ -212,7 +216,7 @@
                     <i class="ti-shopping-cart"></i>
                     Tickets, $15 per person
                 </label>
-                <input id="tickets-quantity" autofocus type="text" class="modal-input" placeholder="How many?">
+                <input id="tickets-quantity" type="text" class="modal-input" placeholder="How many?">
                 <label for="tickests-email" class="modal-label">
                     <i class="ti-user"></i>
                     Send to
@@ -230,7 +234,7 @@
             </footer>
         </div>
     </div>
-
+    <!-- script for buy tickets modal -->
     <script>
         const buyBtns = document.querySelectorAll('.js-buy-ticket')
 
@@ -256,6 +260,38 @@
         modalContainer.addEventListener('click', function (event) {
             event.stopPropagation()
         })
+    </script>
+    <!-- script for mobile menu -->
+    <script>
+        // select menu button 
+        var menuBtn = document.querySelector('.js-menu-button')
+        // select header 
+        const header = document.getElementById('header')
+        var headerHeight = header.clientHeight
+        // Open and close menu
+        menuBtn.addEventListener('click', function () {
+            var isClosed = header.clientHeight === headerHeight
+            if (isClosed) {
+                header.style.height = 'auto'
+            } else {
+                header.style.height = null
+            }
+        })
+        // select menu button
+        const navBtns = document.querySelectorAll('#nav li > a')
+        // Nhan vao cac nut tren menu thi menu tu dong dong
+        for (var i = 0; i < navBtns.length; i++) {
+            navBtns[i].onclick = function (event) {
+                var isParentMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav')
+                if (!isParentMenu) {
+                    header.style.height = null
+                }
+                else {
+                    event.preventDefault()
+                }
+            }
+        }
+
     </script>
 </body>
 

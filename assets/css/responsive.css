@@ -1,0 +1,59 @@
+/* responsive for tablet */
+@media (max-width: 740px) and (min-width: 1023px){
+
+}
+
+/* responsive for mobile */
+@media (max-width: 740px){
+    /* Header */
+    #nav {
+        display: block;
+    }
+    #nav .subnav {
+        position: initial;
+    }
+    #nav .subnav li {
+        background-color: #333;
+    }
+    #nav .subnav a {
+        padding: 5px 35px;
+        color: #fff;
+    }
+    #nav > li{
+        display: block;
+    }
+    #nav > li:first-child { 
+        display: inline-block;
+    }
+    #header {
+        height: 46px;
+        overflow: hidden;
+    }
+    #header .search-button{
+        display: none;
+    }
+    .menu-button{
+        display: block;
+    }
+    /* Content */
+    #content .members-list {
+        flex-direction: column;
+    }
+    .s-col-full{
+        width: 100%;
+        float: unset;
+        margin-bottom: 16px;
+    }
+}
+/* Responsive for Modal buy tickets bug */
+@media (max-width:820px){
+    .modal-container{
+        width: 500px;
+    }
+}
+@media (max-width:500px){
+    .modal-container{
+        width: 100%;
+        margin: auto 8px;
+    }
+}

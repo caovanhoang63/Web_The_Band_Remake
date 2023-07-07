@@ -38,3 +38,9 @@
     2. Kích thước
     3. Màu săc
     4. Kiểu dáng (kiểu chữ,hình tròn,...)
+
+# Responsive
+
+    PC: width >=1024px
+    Tablet: 740 px <= width < 1024px
+    Mobile: width < 740px
